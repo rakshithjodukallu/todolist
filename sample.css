@@ -1,0 +1,186 @@
+
+:root{
+    --gradient: linear-gradient(
+        45deg,
+        #FFE15D,
+        #F49D1A,
+        #DC3535,
+        #B01E68
+    );
+}
+
+.banner{
+    background-image: url("https://images.unsplash.com/photo-1509624776920-0fac24a9dfda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
+    height: 100vh;
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+  }
+  
+  .hellotext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .hellotext h1{
+    font-size: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+    font-weight: 700;
+
+    padding-left: 50px;
+    background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  }
+  
+
+
+  .hero-image{
+    width: 250px;
+    height: 250px;
+    -webkit-mask-image: url("HulkFace.svg");
+    -webkit-mask-size: cover;
+  }
+
+  .welcometext{
+    text-align: center;
+    padding: 50px;
+  }
+
+  .welcometext h2{
+    font-size: 60px;
+    font-weight: 700;
+    background-clip: text;
+    color: #B01E68;
+    animation: textcolor 5s infinite alternate;
+    background-size: 400%;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .welcometext .click{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: right;
+    transition: background-position 1s;
+    padding: 20px;
+    color: azure;
+    border-radius: 10px;
+  }
+
+  .welcometext a:hover, a:focus{
+    background-position: left;
+  }
+
+
+
+  @keyframes textcolor{
+    0% {
+      color: #FFE15D;
+    }
+    30% {
+      color: #F49D1A;
+    }
+    70% {
+      color: #DC3535;
+    }
+    100% {
+      color: #B01E68;
+    }
+
+  }
+
+  h3{
+    font-size: 30px;
+  }
+
+  .fancy{
+    text-decoration: none;
+    color: #DC3535;
+    position: relative;
+  }
+
+  .fancy::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform 250ms ease-in;
+
+  }
+
+  .fancy:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .buttongrp{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttongrp button{
+    padding: 20px;
+    margin: 0 20px;
+    color: #fff;
+    background: #B01E68;
+ 
+    position: relative;
+  }
+
+  button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 200ms ease-in;
+    /* z-index: -1; */
+  }
+
+  .one::after{
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  .one:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .two::after{
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+
+  .two:hover::after{
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  .three::after{
+    transform: scale(0);
+  }
+
+  .three:hover::after{
+    transform: scale(1);
+  }
+  
+  
